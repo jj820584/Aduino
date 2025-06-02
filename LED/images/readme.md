@@ -21,3 +21,31 @@ void loop()
 	delay(80);
 }
 ```
+
+## a와 b로 LED 켜고 끄기
+```c
+
+
+void setup()
+{
+	Serial.begin(9600);
+	pinMode(10, OUTPUT);
+
+}
+
+void loop()
+{
+  if(Serial.available() > 0)
+  {
+  	char sData = Serial.read();
+    if(sData == 'a')
+    {
+    	digitalWrite(10, HIGH);
+    }
+  	else if(sData == 'b')
+    {
+    	digitalWrite(10, LOW);
+    }
+  }
+}
+```
