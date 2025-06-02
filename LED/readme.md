@@ -85,3 +85,63 @@ void loop()
 
 ```
 
+
+
+
+
+
+
+
+
+## 버튼으로 LED 깜빡이기
+
+![led](./images/led_03.png).
+
+
+##source code
+
+
+```c
+#define BUTTON 4
+#define LED_1 10
+#define LED_2 9
+
+int state = 0;
+
+
+void setup()
+{
+	Serial.begin(9600);
+	pinMode(BUTTON, INPUT_PULLUP);
+  	pinMode(LED_1,OUTPUT);
+  	pinMode(LED_2,OUTPUT);
+}
+
+void loop()
+{
+	int buttonValue=!digitalRead(BUTTON);
+  
+  	if(buttonValue == 1)
+    {
+    	state = !state;
+      	delay(500);
+    }
+	if(state == 0)
+    {
+    	digitalWrite(LED_1, HIGH);
+       	digitalWrite(LED_2, LOW);
+      	delay(100);
+       	digitalWrite(LED_1, LOW);
+       	digitalWrite(LED_2, HIGH);
+      	delay(100);
+    }
+  	else if(state ==1)
+    {
+    	digitalWrite(LED_1, LOW);
+      	digitalWrite(LED_2, LOW);
+    }
+  
+}
+
+```
+
