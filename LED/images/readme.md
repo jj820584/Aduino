@@ -49,3 +49,38 @@ void loop()
   }
 }
 ```
+
+
+## LED 여러개 동시에 깜빡이기
+
+![](./images/led_02).
+
+
+##source code
+```c
+#define LED_1 10
+#define LED_2 9
+#define LED_3 8
+
+
+void setup()
+{
+	pinMode(LED_1, OUTPUT);
+	pinMode(LED_2, OUTPUT);
+	pinMode(LED_3, OUTPUT);
+
+}
+
+void loop()
+{
+	digitalWrite(LED_1, HIGH);
+	digitalWrite(LED_2, HIGH);
+	digitalWrite(LED_3, HIGH);
+	delay(100);
+  	digitalWrite(LED_1, LOW);
+	digitalWrite(LED_2, LOW);
+	digitalWrite(LED_3, LOW);
+	delay(100);
+}
+
+```
