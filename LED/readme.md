@@ -73,7 +73,7 @@ void setup()
 
 void loop()
 {
-	digitalWrite(LED_1, HIGH);
+	digitalWrite(LED_1, HIGH);		//3개의 LED를 동시에 점등하고 소등한다. 딜레이는 0.1초로 반복한다.
 	digitalWrite(LED_2, HIGH);
 	digitalWrite(LED_3, HIGH);
 	delay(100);
@@ -102,11 +102,11 @@ void loop()
 
 
 ```c
-#define BUTTON 4
+#define BUTTON 4	//버튼과 LED를 선언해주고 4번, 10번, 9번 핀을 사용한다.
 #define LED_1 10
 #define LED_2 9
 
-int state = 0;
+int state = 0;		//
 
 
 void setup()
@@ -124,7 +124,7 @@ void loop()
   	if(buttonValue == 1)
     {
     	state = !state;
-      	delay(500);
+      	delay(500);		// 버튼을 누르고 때는 순간의 시간차를 
     }
 	if(state == 0)
     {
