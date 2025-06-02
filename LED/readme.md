@@ -157,20 +157,20 @@ void loop()
 
 
 ```c
-#define LED_1 10
-#define VR A0
+#define LED_1 10	// 10번핀에 LED_1이라고 치환
+#define VR A0		// A0핀에 VR이라고 치환
 
 void setup(){
   Serial.begin(9600);
 }
 
 void loop(){
-  int analogValue = analogRead(VR);
-  int analogMapping = map(analogValue, 0, 1023, 0, 255);
+  int analogValue = analogRead(VR);					//아날로그 신호를 선언하고 그 값은 A0이다.
+  int analogMapping = map(analogValue, 0, 1023, 0, 255);	
   
-  analogWrite(LED_1, analogMapping);
+  // 아날로그 맵핑이라는 것을 선언하고 LED의 밝기를 최대 0 ~ 1023까지 밝힐수 있고 최소로 0 ~ 255까지 밝힌다는 함수이다. 
+  analogWrite(LED_1, analogMapping);			
 }
-
 ```
 
 
