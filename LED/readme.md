@@ -53,7 +53,7 @@ void loop()
 
 ## LED 여러개 동시에 깜빡이기
 
-![](./images/led_02).
+![led](./images/led_02.png).
 
 
 ##source code
