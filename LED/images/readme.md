@@ -1,6 +1,6 @@
 # LED 에제 1
 ## LED 깜빡이기
-![led](./images/LED_00.png).
+![led](./images/led_01.png).
 
 ## source code
 
