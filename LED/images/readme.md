@@ -7,8 +7,6 @@
 ```c
 #define LED_1 10
 
-
-
 void setup()
 {
 	pinMode(LED_1, OUTPUT);
