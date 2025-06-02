@@ -1,21 +1,21 @@
-# LED 에제 1
+# LED 예제 1
 ## LED 깜빡이기
 ![led](./images/led_01.png).
 
 ## source code
 
 ```c
-#define LED_1 10
+#define LED_1 10	//define은 일종의 치환이다. 코드 전체에서 LED_!은 10으로 치환되서 읽게된다. define을 사용하면 코드를 보기 쉽고 나중에 핀 번호를 바꾸고 싶을때 바꾸기 쉽게 만들어 유지보수하기가 쉽다.
 
 void setup()
 {
-	pinMode(LED_1, OUTPUT);
+	pinMode(LED_1, OUTPUT);	// LED_!을 출력 핀으로 지정한다.
 
 }
 
 void loop()
 {
-	digitalWrite(LED_1, HIGH);
+	digitalWrite(LED_1, HIGH);	// LED_1이 점등하고 소등을 0.08초 딜레이를 가지고 루프를 한다. 
 	delay(80);
   	digitalWrite(LED_1, LOW);
 	delay(80);
@@ -28,21 +28,21 @@ void loop()
 
 void setup()
 {
-	Serial.begin(9600);
+	Serial.begin(9600);	// 아두이노IDE에 저장된 함수이다.
 	pinMode(10, OUTPUT);
 
 }
 
 void loop()
 {
-  if(Serial.available() > 0)
+  if(Serial.available() > 0)	// 만약 통신이 가능하다면
   {
-  	char sData = Serial.read();
-    if(sData == 'a')
+  	char sData = Serial.read();	// 변수sData를 선언해주고 시리얼 모니터로 확인 할 수 있다.
+    if(sData == 'a')			// a를 누르면 점등한다.
     {
     	digitalWrite(10, HIGH);
     }
-  	else if(sData == 'b')
+  	else if(sData == 'b')		// b를 누르면 소등한다.
     {
     	digitalWrite(10, LOW);
     }
