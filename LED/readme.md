@@ -145,3 +145,37 @@ void loop()
 
 ```
 
+
+
+## 가변저항으로 LED 밝기 조절하기
+
+![led](./images/led_04.png).
+
+
+##source code
+
+
+
+```c
+#define LED_1 10
+#define VR A0
+
+void setup(){
+  Serial.begin(9600);
+}
+
+void loop(){
+  int analogValue = analogRead(VR);
+  int analogMapping = map(analogValue, 0, 1023, 0, 255);
+  
+  analogWrite(LED_1, analogMapping);
+}
+
+```
+
+
+
+
+
+
+
