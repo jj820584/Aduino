@@ -4,7 +4,7 @@
 ![Buzer](./images/buzer_01.png).
 
 
-,,,c
+```c
 
 #define PIEZO_BUZZER 3
 #define SW1 12
@@ -30,4 +30,4 @@ void loop() {
   else noTone(PIEZO_BUZZER);
 }
 
-,,,
+```
