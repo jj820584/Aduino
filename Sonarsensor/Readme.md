@@ -2,7 +2,7 @@
 
 # 초음파 센서 예제1
 ## 초음파 거리 센서 (4pin)
-![Sonarsensor](./images/Sonarsensor_01.png).
+![Ultrasonic](./images/Sonarsensor_01.png).
 
 ```c
 /* 거리의 따라 LED 표시 */
