@@ -2,7 +2,7 @@
 ## 포토레지스터 빛 센서 사용하기
 
 
-![LCD](./images/Photoregister_01.png).
+![Photoresistor](./images/Photoresistor_01.png).
 
 ```c
 
