@@ -25,7 +25,7 @@ void loop() {
   if (digitalRead(SW1) == 0) tone(PIEZO_BUZZER, 262, 1000);        // digitalRead는 버튼상태를 읽는 함수이다.sw1이 0=low 즉, 버튼이 눌러졌다면 작동한다. 
   else if (digitalRead(SW2) == 0) tone(PIEZO_BUZZER, 294, 1000);    // tone함수는 피에조 부저의 소리를 출력하는 함수이다. tone(핀번호, 주파수, 지속시간)이다.
   else if (digitalRead(SW3) == 0) tone(PIEZO_BUZZER, 330, 1000);    // 즉, 해당되는 스위치를 누르면 피에조 부저가 작동하고 버튼마다 할달된 주파수를 1초간 출력된다.
-  else if (digitalRead(SW4) == 0) tone(PIEZO_BUZZER, 349, 1000);
+  else if (digitalRead(SW4) == 0) tone(PIEZO_BUZZER, 349, 1000);    // 262 도, 294 레, 330 미, 349 파, 392 솔, 440 라, 494 시
   else if (digitalRead(SW5) == 0) tone(PIEZO_BUZZER, 392, 1000);
   else noTone(PIEZO_BUZZER);                                        // 지정된 핀에 재생된 소리를 멈추는 함수이다. 즉, 스위치 1번~5번을 누르지 않으면 소리가 정지된다는 의미이다.
 }
