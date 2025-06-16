@@ -24,6 +24,9 @@ void loop()
 # LCD 예제 2
 ## LCD 16X2 문자열 출력하기
 
+
+![LCD](./images/lcd_01.png).
+
 ```c
 
 #include <LiquidCrystal.h>
