@@ -99,22 +99,22 @@ void loop() {
 ![LCD](./images/lcd_02.png).
 
 ```c
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal_I2C.h>  // 라이브러리에서 LiquidCrystal_I2C.h fksms I2C를 사용하기 위한 헤더파일을 불러온다.
 
-int seconds = 0;
+int seconds = 0;      // 1초를 세기위해 초를 선언해준다.
 
-LiquidCrystal_I2C lcd_1(0x27, 16, 2);
-
+LiquidCrystal_I2C lcd_1(0x27, 16, 2); // lcd_1이라는 객체를 선언한다. 객체란 일종의 클래스로 만든 변수들, 함수들이라고 할 수 있다. 클래스는 변수들과 함수들의 포괄하여 의미한다. 즉, 함수의 변수, 함수의 함수라고 할수도 있다.
+                                      // 0x27은 객체의 주소이고, 16, 2(가로 열, 세로 행)을 의미한다.  
 void setup()
 {
-  lcd_1.init();
-  lcd_1.print("hello world");
+  lcd_1.init();                        // lce_1을 초기화한다.
+  lcd_1.print("hello world");          // hello world라는 문자열을 출력한다.
 }
 
-void loop()
+void loop()                            //다음과 동작을 반복동작 한다.
 {
-  lcd_1.setCursor(0, 1);
-  lcd_1.print(seconds);
+  lcd_1.setCursor(0, 1);              // 커서를 0,1로 옮겨준다. 가로0줄, 세로 1줄로 옮겨준다.
+  lcd_1.print(seconds);                // 처음 선언해준 second에 할당된 값을 출력한다.
   lcd_1.setBacklight(1);
   delay(500); // Wait for 500 millisecond(s)
   lcd_1.setBacklight(0);
