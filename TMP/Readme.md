@@ -1,5 +1,5 @@
 
-# 온도계 예제 1
+# 온도센서 예제 1
 ## 온도 센서 TMP36
 
 
@@ -69,3 +69,43 @@ void loop()
 }
 
 ```
+# 온도센서 예제 2
+## TMP36 and I2C LCD Display
+
+
+
+![TMP](./images/TMP_02.png).
+
+
+```c
+#include <Wire.h>
+#include <Adafruit_LiquidCrystal.h>
+Adafruit_LiquidCrystal lcd(0);
+
+void setup()
+{
+  lcd.begin(16, 2);
+  lcd.setCursor(0, 0);
+  lcd.print("Initializing...");
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Temperature: ");
+}
+
+void loop()
+{
+  // Read the temperature from the sensor
+  int sensorValue = analogRead(A0);
+
+  // Convert the temperature to degrees Celsius
+  float temperature = (sensorValue * 5.0 / 1024.0 - 0.5) * 100.0;
+  // convert the sensor value to temperature in degrees Celsius
+
+  // Display the temperature on the LCD
+  lcd.setCursor(8, 1);
+  lcd.print(temperature);
+  lcd.print(" C");
+}
+```
+
+
