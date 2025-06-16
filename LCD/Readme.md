@@ -90,3 +90,38 @@ void loop() {
 }
 
 ```
+
+
+
+# LCD 예제 3
+# I2C LCD를 이용한 문자열 출력
+
+![LCD](./images/lcd_02.png).
+
+```c
+#include <LiquidCrystal_I2C.h>
+
+int seconds = 0;
+
+LiquidCrystal_I2C lcd_1(0x27, 16, 2);
+
+void setup()
+{
+  lcd_1.init();
+  lcd_1.print("hello world");
+}
+
+void loop()
+{
+  lcd_1.setCursor(0, 1);
+  lcd_1.print(seconds);
+  lcd_1.setBacklight(1);
+  delay(500); // Wait for 500 millisecond(s)
+  lcd_1.setBacklight(0);
+  delay(500); // Wait for 500 millisecond(s)
+  seconds += 1;
+}
+
+```
+
+
