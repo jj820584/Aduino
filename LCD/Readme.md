@@ -1,7 +1,7 @@
 # LCD 예제 1
 ## LCD 16X2 출력하기
 
-![LCD](./images/LCD_01.png).
+![LCD](./images/lcd_01.png).
 
 ```c
 
