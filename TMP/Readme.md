@@ -3,6 +3,8 @@
 ## 온도 센서 TMP36
 
 
+![TMP](./images/TMP_01.png).
+
 ```c
 int baselineTemp = 0;  // 기본 온도를 초기화한다.
 int celsius = 0;
