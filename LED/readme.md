@@ -9,7 +9,7 @@
 
 void setup()
 {
-	pinMode(LED_1, OUTPUT);	// LED_!을 출력 핀으로 지정한다.
+	pinMode(LED_1, OUTPUT);	// LED_1을 출력 핀으로 지정한다.
 
 }
 
