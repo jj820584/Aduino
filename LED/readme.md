@@ -112,7 +112,7 @@ int state = 0;		//
 void setup()
 {
 	Serial.begin(9600);
-	pinMode(BUTTON, INPUT_PULLUP);
+	pinMode(BUTTON, INPUT_PULLUP);		// 버튼에도 저항이 있어서 풀업없이도 실제 작동이 가능하지만 팅크캐드같은 곳에서 시뮬레이션 돌릴땐 풀업이 필요하다
   	pinMode(LED_1,OUTPUT);
   	pinMode(LED_2,OUTPUT);
 }
